@@ -1,0 +1,68 @@
+{
+  "analysis_type": "corrected_abandonment_analysis",
+  "dataset_info": {
+    "total_records": 2173,
+    "analysis_date": "2026-04-13T08:32:45.877765"
+  },
+  "comparison_results": {
+    "original_stats": {
+      "Abandoned": 885,
+      "Transfer": 855,
+      "-": 290,
+      "Intent Complete": 143
+    },
+    "corrected_stats": {
+      "Transfer": 855,
+      "Abandoned": 846,
+      "-": 290,
+      "Intent Complete": 143,
+      "Intent Complete (Corrected)": 39
+    },
+    "improvement": {
+      "abandoned_reduction": "39",
+      "success_increase": "39",
+      "abandon_rate_change": -1.79475379659457,
+      "success_rate_change": 1.79475379659457
+    }
+  },
+  "reclassified_analysis": {
+    "total_reclassified": 39,
+    "milestone_breakdown": {
+      "Appointment Confirmation": 26,
+      "Closing Call": 6,
+      "Appointment Handling": 4,
+      "Verification": 2,
+      "FAQ": 1
+    },
+    "abandonment_point_breakdown": {
+      "Appointment Confirmation": 26,
+      "Intent Complete": 6,
+      "Appointment Handling": 3,
+      "Transfer": 2,
+      "Abandoned": 1,
+      "Closing Call": 1
+    },
+    "intent_completion_breakdown": {
+      "-": 17,
+      "Schedule": 12,
+      "Cancel": 4,
+      "Reschedule": 3,
+      "Confirm": 3
+    }
+  },
+  "performance_metrics": {
+    "total_calls": 2173,
+    "successful_completions": "182",
+    "transfers": "855",
+    "true_abandonments": "846",
+    "success_rate": 8.375517717441324,
+    "abandon_rate": 38.93235158766682,
+    "transfer_rate": 39.34652554072711,
+    "ai_effectiveness": 17.55062680810029
+  },
+  "key_insights": {
+    "calls_reclassified": "39",
+    "abandonment_reduction": -1.79475379659457,
+    "success_increase": 1.79475379659457
+  }
+}

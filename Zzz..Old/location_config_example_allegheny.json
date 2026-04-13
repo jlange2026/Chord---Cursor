@@ -1,0 +1,147 @@
+{
+  "location_id": "pda_allegheny",
+  "location_name": "PDA Allegheny",
+  "agent_name": "Allie",
+  "caller_context": "All callers are parents or guardians scheduling appointments for their children (patients).",
+  "specialty": "Dental",
+  "lines_of_business": "Pediatric Dental",
+
+  "contact": {
+    "phone": "215-282-8000",
+    "fax": "215-427-1782",
+    "address": "2301 East Allegheny Ave., Ste 201, Philadelphia, PA 19134",
+    "parking": "There is free parking across the street on Tulip Street.",
+    "website_instructions": "You can find more information at pediatric dental associates dot com, then go to locations, and select Allegheny Avenue."
+  },
+
+  "hours": {
+    "display": "Monday: 7:00 AM to 7:00 PM, Tuesday and Wednesday: 7:00 AM to 4:30 PM, Thursday: 7:00 AM to 3:00 PM, Friday: 7:00 AM to 2:30 PM",
+    "schedule": {
+      "Mon": "7:00 AM – 7:00 PM",
+      "Tues": "7:00 AM – 4:30 PM",
+      "Wed": "7:00 AM – 4:30 PM",
+      "Thurs": "7:00 AM – 3:00 PM",
+      "Fri": "7:00 AM – 2:30 PM"
+    }
+  },
+
+  "age_limits": {
+    "new_patient_max": 15,
+    "existing_patient_max": 17,
+    "baby_wellness_max_age": 5
+  },
+
+  "appointment_types": [
+    {
+      "name": "Pedo New Patient Exam/Cleaning",
+      "patient_type": "new",
+      "min_age": 0,
+      "max_age": 15,
+      "spoken_name": "New Patient Pediatric Exam and Cleaning"
+    },
+    {
+      "name": "Pedo Existing Patient Cleaning",
+      "patient_type": "existing",
+      "min_age": 0,
+      "max_age": 17,
+      "spoken_name": "Pediatric Cleaning"
+    },
+    {
+      "name": "Baby Wellness",
+      "patient_type": "new",
+      "min_age": 0,
+      "max_age": 5,
+      "spoken_name": "Baby Wellness"
+    }
+  ],
+
+  "intent_routing": [
+    {
+      "keywords": ["schedule", "appointment", "reschedule", "cancel", "confirm", "change"],
+      "action": "HANDLE"
+    },
+    {
+      "keywords": ["bill", "billing", "payment", "insurance claim", "balance", "statement", "charge"],
+      "action": "TRANSFER",
+      "escalation_intent": "Billing"
+    },
+    {
+      "keywords": ["surgery", "surgery center", "surgical", "referral"],
+      "action": "TRANSFER",
+      "escalation_intent": "Surgery"
+    },
+    {
+      "keywords": ["sedation", "sedated", "put to sleep", "sedation appointment"],
+      "action": "TRANSFER",
+      "escalation_intent": "Sedation"
+    }
+  ],
+
+  "accepted_insurances": [
+    "Access/Promise", "Abestos Workers Welfare Fund", "Amerihealth Administrators-Dentemax",
+    "Aetna Better Health (Medicaid thru Skygen)", "Aetna Better Health Kids-Chip (thru Skygen)",
+    "Aetna PPO", "Ameritas", "Assurant", "Anthem Dental", "APWU Health Plan",
+    "Blue Cross/Blue Shield (thru Dentemax)", "Capital Blue Cross-Private",
+    "Carefirst-thru Dentemax", "Careington-PRIVATE (Core Five)",
+    "Carpenters Health & Welfare Fund", "Cigna", "Companion Life-thru Dentemax",
+    "Coresource-thru Aetna", "Coventry Dental (thru Dentemax)", "Dearborn National Life",
+    "Delta Dental", "Denex", "Dominion Dental", "EBS/Dentemax",
+    "Fidelio (Gold, Silver or Bronze)", "Freedom Life", "Gateway (Scion)",
+    "Guardian", "GEHA", "Health Partners (Avesis)", "Horizon BC/BS NJ",
+    "Humana Dental/Dentemax", "IMG/Dentemax", "Keystone First (Scion)",
+    "Kidz Partners-Medicaid (thru Avesis)", "LEHB",
+    "Lincoln Financial-thru DBP/United Healthcare", "Lincoln Dental Connection(thru Dentemax)",
+    "Lineco-Dentemax", "Local Union 169, 634, 115, 830 & 929",
+    "Mattucci & Associates", "Meritain/Dentemax", "Metlife",
+    "National Elevator Industry", "Premera BC/CS-Dentemax", "Principal Life Insurance",
+    "Reliance", "Security Life (thru Dentemax)", "Sunlife",
+    "Teamcare Health & Welfare Fund", "UMR", "United Concordia",
+    "United Concordia Plus or DHMO (age 6 and under only AND needs referral)",
+    "United Concordia Chip", "United Healthcare(PRIVATE)",
+    "United Healthcare Comm Plan Chip (Skygen)", "United Healthcare Comm Plan Med. (Skygen)",
+    "UPMC for Kids Chip (Skygen)", "UPMC for You Med (Skygen)", "UPMC Commercial",
+    "Vaccaro Associates", "WebTPA"
+  ],
+
+  "insurance_location_notes": {
+    "Gateway (Scion)": "Only at Allegheny location"
+  },
+
+  "dmo_policies": [
+    {
+      "name": "AETNA DMO",
+      "max_age": 7,
+      "all_locations": true,
+      "requires_referral": true,
+      "referral_from": "Aetna"
+    },
+    {
+      "name": "CIGNA DHMO",
+      "max_age": 13,
+      "all_locations": true,
+      "requires_referral": true,
+      "referral_from": "Cigna"
+    },
+    {
+      "name": "United Concordia DMO",
+      "max_age": null,
+      "all_locations": false,
+      "requires_referral": true,
+      "referral_from": "United Concordia",
+      "notes": "Varies by location and age"
+    }
+  ],
+
+  "new_patient_special": {
+    "price": "ninety-nine dollars",
+    "includes": "full comprehensive exam, cleaning, fluoride, and x-rays",
+    "disclaimer": "not for referrals or second opinions"
+  },
+
+  "features": {
+    "walk_ins": false,
+    "waitlist": false,
+    "legal_guardian_reminder": true,
+    "extension_transfers": false
+  }
+}

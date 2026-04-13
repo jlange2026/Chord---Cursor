@@ -1,0 +1,109 @@
+================================================================================
+CALL CENTER ANALYSIS REPORT
+================================================================================
+
+EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+Total Calls Analyzed: 184
+
+CRITICAL FINDING - Call Classification Issue:
+--------------------------------------------------------------------------------
+Calls with Intent Complete but Abandonment Point Set: 3
+  → These are being INCORRECTLY classified as 'abandoned'
+  → These should be classified as 'Intent Complete'
+  → The caller hung up AFTER their need was fulfilled
+
+Truly Abandoned Calls (Intent NOT Complete): 55
+  → These are correctly classified as abandoned
+
+CORRECTED METRICS:
+  Total Intent Complete: 41
+  Total Transfers: 81
+  Total Truly Abandoned: 55
+  Total In Progress/Other: 7
+
+INTENT ANALYSIS
+--------------------------------------------------------------------------------
+Schedule: 63 calls
+  ├─ Completed: 10
+  ├─ Transferred: 37
+  └─ Abandoned: 16
+Reschedule: 34 calls
+  ├─ Completed: 17
+  ├─ Transferred: 7
+  └─ Abandoned: 10
+Other: 25 calls
+  ├─ Completed: 0
+  ├─ Transferred: 21
+  └─ Abandoned: 4
+Confirm: 24 calls
+  ├─ Completed: 8
+  ├─ Transferred: 4
+  └─ Abandoned: 12
+Cancel: 8 calls
+  ├─ Completed: 5
+  ├─ Transferred: 1
+  └─ Abandoned: 2
+FAQ: 6 calls
+  ├─ Completed: 0
+  ├─ Transferred: 4
+  └─ Abandoned: 2
+Question: 3 calls
+  ├─ Completed: 0
+  ├─ Transferred: 2
+  └─ Abandoned: 1
+Late: 1 calls
+  ├─ Completed: 1
+  ├─ Transferred: 0
+  └─ Abandoned: 0
+
+KEY PERFORMANCE METRICS
+--------------------------------------------------------------------------------
+Total Cancellations Completed: 6
+Total Reschedules Completed: 34
+Saved Cancels (Cancel → Reschedule): 10
+Cancel Save Rate: 166.7%
+
+ESCALATION ANALYSIS
+--------------------------------------------------------------------------------
+Total Transfers: 81
+  Live Agent: 79 calls
+  Emergency: 3 calls
+
+FINAL DISPOSITION (AS RECORDED IN DATA)
+--------------------------------------------------------------------------------
+Transfer: 81 calls
+In Progress: 51 calls
+Intent Complete: 38 calls
+Unknown: 7 calls
+Automated & Transferred: 7 calls
+
+EXAMPLES OF MISCLASSIFIED CALLS
+--------------------------------------------------------------------------------
+Sample calls marked with Abandonment Point but Intent Complete:
+
+Example 1:
+  Session: 1769012217-000000000001105456-SR-000-000000000000DEN130-04E85398
+  Caller: Bonisha White
+  Intent: Reschedule
+  Disposition: Automated & Transferred / Automated & Transferred
+  Abandonment Point: No response after 3 attempts
+  → Classification: Should be 'Intent Complete', NOT 'Abandoned'
+
+Example 2:
+  Session: 1769017165-000000000001105456-SR-000-000000000000DAL130-07CB0326
+  Caller: Felicia
+  Intent: Schedule
+  Disposition: Automated & Transferred / Automated & Transferred
+  Abandonment Point: No response after 3 attempts
+  → Classification: Should be 'Intent Complete', NOT 'Abandoned'
+
+Example 3:
+  Session: 1769026168-000000000001105456-SR-000-000000000000DEN130-0E33611A
+  Caller: Stephanie Gilbert
+  Intent: Late
+  Disposition: Automated & Transferred / Automated & Transferred
+  Abandonment Point: No response after 3 attempts
+  → Classification: Should be 'Intent Complete', NOT 'Abandoned'
+
+================================================================================

@@ -1,0 +1,70 @@
+{
+  "total_calls": 184,
+  "corrected_metrics": {
+    "intent_complete": 41,
+    "truly_abandoned": 55,
+    "transfers": 81,
+    "in_progress": 7
+  },
+  "misclassification_issue": {
+    "calls_affected": 3,
+    "description": "Calls with Intent Complete but marked with Abandonment Point"
+  },
+  "intent_breakdown": {
+    "Reschedule": 34,
+    "Confirm": 24,
+    "Cancel": 8,
+    "Schedule": 63,
+    "Other": 25,
+    "Question": 3,
+    "FAQ": 6,
+    "Late": 1
+  },
+  "intent_outcomes": {
+    "Reschedule": {
+      "complete": 17,
+      "abandoned": 10,
+      "transfer": 7
+    },
+    "Confirm": {
+      "complete": 8,
+      "abandoned": 12,
+      "transfer": 4
+    },
+    "Cancel": {
+      "complete": 5,
+      "abandoned": 2,
+      "transfer": 1
+    },
+    "Schedule": {
+      "complete": 10,
+      "abandoned": 16,
+      "transfer": 37
+    },
+    "Other": {
+      "complete": 0,
+      "abandoned": 4,
+      "transfer": 21
+    },
+    "Question": {
+      "complete": 0,
+      "abandoned": 1,
+      "transfer": 2
+    },
+    "None": {
+      "complete": 0,
+      "abandoned": 7,
+      "transfer": 0
+    },
+    "FAQ": {
+      "complete": 0,
+      "abandoned": 2,
+      "transfer": 4
+    },
+    "Late": {
+      "complete": 1,
+      "abandoned": 0,
+      "transfer": 0
+    }
+  }
+}

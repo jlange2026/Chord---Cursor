@@ -1,0 +1,149 @@
+{
+  "location_id": "pda_west_philly",
+  "location_name": "PDA West Philly",
+  "agent_name": "Allie",
+  "caller_context": "All callers are parents or guardians scheduling appointments for their children (patients).",
+  "specialty": "Dental",
+  "lines_of_business": "Pediatric Dental",
+
+  "contact": {
+    "phone": "215-383-1376",
+    "fax": "215-383-1377",
+    "address": "5629 Vine St., C-9, West Philadelphia, PA 19139",
+    "parking": "Parking lot in front of office (located in shopping center)",
+    "website_instructions": "You can request an appointment online at pediatric dental associates dot com, select new patients, then request an appointment."
+  },
+
+  "hours": {
+    "display": "Monday through Thursday: 8:00 AM to 5:00 PM",
+    "schedule": {
+      "Mon": "8:00 AM – 5:00 PM",
+      "Tues": "8:00 AM – 5:00 PM",
+      "Wed": "8:00 AM – 5:00 PM",
+      "Thurs": "8:00 AM – 5:00 PM"
+    }
+  },
+
+  "age_limits": {
+    "new_patient_max": 15,
+    "existing_patient_max": 17,
+    "baby_wellness_max_age": 4
+  },
+
+  "appointment_types": [
+    {
+      "name": "Pedo New Patient Exam/Cleaning",
+      "patient_type": "new",
+      "min_age": 0,
+      "max_age": 15,
+      "spoken_name": "New Patient Pediatric Exam and Cleaning"
+    },
+    {
+      "name": "Pedo Existing Patient Cleaning",
+      "patient_type": "existing",
+      "min_age": 0,
+      "max_age": 17,
+      "spoken_name": "Pediatric Cleaning"
+    },
+    {
+      "name": "Baby Wellness",
+      "patient_type": "new",
+      "min_age": 0,
+      "max_age": 4,
+      "spoken_name": "Baby Wellness"
+    }
+  ],
+
+  "intent_routing": [
+    {
+      "keywords": ["schedule", "appointment", "reschedule", "cancel", "confirm", "change"],
+      "action": "HANDLE"
+    },
+    {
+      "keywords": ["bill", "billing", "payment", "insurance claim", "balance", "statement", "charge"],
+      "action": "TRANSFER",
+      "escalation_intent": "Billing"
+    },
+    {
+      "keywords": ["operating room", "OR", "surgery room"],
+      "action": "TRANSFER",
+      "escalation_intent": "Operating"
+    },
+    {
+      "keywords": ["frenectomy", "tongue tie", "lip tie", "infant procedure", "baby tongue"],
+      "action": "TRANSFER",
+      "escalation_intent": "Frenectomy"
+    },
+    {
+      "keywords": ["extension", "ext", "dial extension", "transfer to extension"],
+      "action": "TRANSFER",
+      "escalation_intent": "EXTENSION_NUMBER"
+    }
+  ],
+
+  "accepted_insurances": [
+    "Access/Promise", "Abestos Workers Welfare Fund", "Amerihealth Administrators-Dentemax",
+    "Aetna Better Health (Medicaid thru Skygen)", "Aetna Better Health Kids-Chip (thru Skygen)",
+    "Aetna PPO", "Ameritas", "Assurant", "Anthem Dental", "APWU Health Plan",
+    "Blue Cross/Blue Shield (thru Dentemax)", "Capital Blue Cross-Private",
+    "Carefirst-thru Dentemax", "Careington-PRIVATE (Core Five)",
+    "Carpenters Health & Welfare Fund", "Cigna", "Companion Life-thru Dentemax",
+    "Coresource-thru Aetna", "Coventry Dental (thru Dentemax)", "Dearborn National Life",
+    "Delta Dental", "Denex", "Dominion Dental", "EBS/Dentemax",
+    "Fidelio (Gold, Silver or Bronze)", "Freedom Life",
+    "Guardian", "GEHA", "Health Partners (Avesis)", "Horizon BC/BS NJ",
+    "Humana Dental/Dentemax", "IMG/Dentemax", "Keystone First (Scion)",
+    "Kidz Partners-Medicaid (thru Avesis)", "LEHB",
+    "Lincoln Financial-thru DBP/United Healthcare", "Lincoln Dental Connection(thru Dentemax)",
+    "Lineco-Dentemax", "Local Union 169, 634, 115, 830 & 929",
+    "Mattucci & Associates", "Meritain/Dentemax", "Metlife",
+    "National Elevator Industry", "Premera BC/CS-Dentemax", "Principal Life Insurance",
+    "Reliance", "Security Life (thru Dentemax)", "Sunlife",
+    "Teamcare Health & Welfare Fund", "UMR", "United Concordia",
+    "United Concordia Plus or DHMO (age 6 and under only AND needs referral)",
+    "United Concordia Chip", "United Healthcare(PRIVATE)",
+    "United Healthcare Comm Plan Chip (Skygen)", "United Healthcare Comm Plan Med. (Skygen)",
+    "UPMC for Kids Chip (Skygen)", "UPMC for You Med (Skygen)", "UPMC Commercial",
+    "Vaccaro Associates", "WebTPA"
+  ],
+
+  "insurance_location_notes": {},
+
+  "dmo_policies": [
+    {
+      "name": "AETNA DMO",
+      "max_age": 7,
+      "all_locations": true,
+      "requires_referral": true,
+      "referral_from": "Aetna"
+    },
+    {
+      "name": "CIGNA DHMO",
+      "max_age": 13,
+      "all_locations": true,
+      "requires_referral": true,
+      "referral_from": "Cigna"
+    },
+    {
+      "name": "United Concordia DMO",
+      "max_age": null,
+      "all_locations": false,
+      "requires_referral": true,
+      "referral_from": "United Concordia",
+      "notes": "Varies by location and age"
+    }
+  ],
+
+  "new_patient_special": {
+    "price": "ninety-nine dollars",
+    "includes": "full comprehensive exam, cleaning, fluoride, and x-rays",
+    "disclaimer": "not for referrals or second opinions"
+  },
+
+  "features": {
+    "walk_ins": false,
+    "waitlist": false,
+    "legal_guardian_reminder": true,
+    "extension_transfers": true
+  }
+}
